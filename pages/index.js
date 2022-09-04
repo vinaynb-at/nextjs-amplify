@@ -17,6 +17,10 @@ export default function Home({ users }) {
       }).catch((e) => { console.log(e) });
   }, []);
 
+  const onClickUsername = (name)=>{
+    alert(`Name of user is ${name} `);
+  }
+
   return (
     <>
       <h1>SSR Workshop | Next.js Exercise</h1>
@@ -45,7 +49,7 @@ export default function Home({ users }) {
           {users.map((user, index) => (
             <tr key={index}>
               <td><a href={`/user/${user.id}`}>{user.name}</a></td>
-              <td>{user.username}</td>
+              <td onClick={() => { onClickUsername(user.name) }}>{user.username}</td>
               <td>{user.email}</td>
             </tr>
           ))}
