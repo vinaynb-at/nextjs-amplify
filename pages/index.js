@@ -5,6 +5,7 @@ export async function getServerSideProps({ params, req, res, query, preview, pre
   server side code
     tasks
       - fetch users data server side
+      - endpoint - https://jsonplaceholder.typicode.com/users
   */
 
 }
